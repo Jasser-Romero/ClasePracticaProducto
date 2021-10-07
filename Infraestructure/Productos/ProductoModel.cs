@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Enums;
+using Domain.Interfaces;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Text;
 
 namespace Infraestructure.Productos
 {
-    public class ProductoModel
+    public class ProductoModel : IProductoModel
     {
 
         private Producto[] productos;
@@ -195,6 +196,26 @@ namespace Infraestructure.Productos
             }
 
             return index;
+        }
+
+        Producto IProductoModel.GetProductosByUnidadMedida(UnidadMedida um)
+        {
+            throw new NotImplementedException();
+        }
+
+        Producto IProductoModel.GetProductosByFechaVencimiento(DateTime dt)
+        {
+            throw new NotImplementedException();
+        }
+
+        Producto IProductoModel.GetProductosByRangoPrecio(decimal start, decimal end)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Producto[] FindAll()
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

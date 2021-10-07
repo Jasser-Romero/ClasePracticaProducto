@@ -17,9 +17,9 @@ namespace AppCore.Services
             this.productoModel = productoModel;
         }
 
-        public void Create(Producto t)
+        public void Add(Producto t)
         {
-            productoModel.Create(t);
+            productoModel.Add(t);
         }
 
         public bool Delete(Producto t)

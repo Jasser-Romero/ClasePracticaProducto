@@ -8,7 +8,7 @@ namespace AppCore.Interfaces
 {
     public interface IProductoService:IService<Producto>
     {
-        Producto GetProductoById(int code);
+        Producto GetProductoById(int id);
         Producto GetProductosByUnidadMedida(UnidadMedida um);
         Producto GetProductosByFechaVencimiento(DateTime dt);
         Producto GetProductosByRangoPrecio(decimal start, decimal end);

@@ -6,7 +6,7 @@ namespace Domain.Interfaces
 {
     public interface IModel<T>
     {
-        void Create(T t);
+        void Add(T t);
         int Update(T t);
         bool Delete(T t);
         T[] FindAll(); 
