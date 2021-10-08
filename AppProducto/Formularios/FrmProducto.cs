@@ -24,15 +24,6 @@ namespace AppProducto.Formularios
             InitializeComponent();
         }
 
-        private void FrmProducto_Load(object sender, EventArgs e)
-        {
-            cmbMeasureUnit.Items.AddRange(Enum.GetValues(typeof(UnidadMedida))
-                                              .Cast<object>()
-                                              .ToArray()
-                                          );
-        }
-
-
         private void btnOk_Click_1(object sender, EventArgs e)
         {
             Producto p = new Producto()
@@ -51,9 +42,12 @@ namespace AppProducto.Formularios
             Dispose();
         }
 
-        private void btnOk_Click_1(object sender, EventArgs e)
+        private void FrmProducto_Load_1(object sender, EventArgs e)
         {
-
+            cmbMeasureUnit.Items.AddRange(Enum.GetValues(typeof(UnidadMedida))
+                                              .Cast<object>()
+                                              .ToArray()
+                                          );
         }
     }
 }
