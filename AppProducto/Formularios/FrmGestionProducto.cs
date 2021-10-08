@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppCore.Interfaces;
 using Domain.Entities;
 using Domain.Enums;
 using Infraestructure.Productos;
@@ -16,8 +17,10 @@ namespace AppProducto.Formularios
     public partial class FrmGestionProducto : Form
     {
         private ProductoModel productoModel;
-        public FrmGestionProducto()
+        private IProductoService productoService;
+        public FrmGestionProducto(IProductoService productoService)
         {
+            this.productoService = productoService;
             InitializeComponent();
         }
 
@@ -28,15 +31,6 @@ namespace AppProducto.Formularios
                                               .ToArray()
                                           );
 
-        }
-
-        private void BtnNew_Click(object sender, EventArgs e)
-        {
-            FrmProducto frmProducto = new FrmProducto();
-            frmProducto.PModel = productoModel;
-            frmProducto.ShowDialog();
-
-            rtbProductView.Text = productoModel.GetProductosAsJson();
         }
 
         private void CmbFinderType_SelectedIndexChanged(object sender, EventArgs e)
@@ -54,5 +48,13 @@ namespace AppProducto.Formularios
             }
         }
 
+        private void btnNew_Click_1(object sender, EventArgs e)
+        {
+            FrmProducto frmProducto = new FrmProducto();
+            frmProducto.PService = productoService;
+            frmProducto.ShowDialog();
+
+            rtbProductView.Text = productoService.GetProductosAsJson();
+        }
     }
 }

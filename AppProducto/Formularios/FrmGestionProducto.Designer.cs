@@ -137,6 +137,7 @@ namespace AppProducto.Formularios
             this.btnNew.TabIndex = 2;
             this.btnNew.Text = "Nuevo";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click_1);
             // 
             // FrmGestionProducto
             // 
