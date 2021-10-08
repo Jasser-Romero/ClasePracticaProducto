@@ -46,5 +46,10 @@ namespace AppProducto.Formularios
 
             Dispose();
         }
+
+        private void btnOk_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -54,5 +54,9 @@ namespace AppProducto.Formularios
             }
         }
 
+        private void btnNew_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

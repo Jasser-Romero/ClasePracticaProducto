@@ -61,7 +61,7 @@ namespace Infraestructure.Productos
 
             return productos.Length == tmp.Length;
         }
-        public Producto[] GetAll()
+        public Producto[] FindAll()
         {
             return productos;
         }
@@ -196,26 +196,6 @@ namespace Infraestructure.Productos
             }
 
             return index;
-        }
-
-        Producto IProductoModel.GetProductosByUnidadMedida(UnidadMedida um)
-        {
-            throw new NotImplementedException();
-        }
-
-        Producto IProductoModel.GetProductosByFechaVencimiento(DateTime dt)
-        {
-            throw new NotImplementedException();
-        }
-
-        Producto IProductoModel.GetProductosByRangoPrecio(decimal start, decimal end)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Producto[] FindAll()
-        {
-            throw new NotImplementedException();
         }
 
         #endregion
